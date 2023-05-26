@@ -124,16 +124,11 @@
     // test if a specific column on this board contains a conflict
     hasColConflictAt: function(colIndex) {
 
-      // colIndex = 0
-      // declare count integer = 0
       var count = 0;
       var n = this.rows().length;
       var matrix = this.rows();
 
-      // iterate through this.rows()
       for (var i = 0; i < n; i++) {
-        // if value at this.rows()[colIndex] === 1
-        // count++
         if (matrix[i][colIndex] === 1) {
           count++;
         }
@@ -145,7 +140,7 @@
         return false;
       }
 
-      return false; // fixme
+      return false;
     },
 
     // test if any columns on this board contain conflicts
@@ -158,40 +153,14 @@
         }
       }
 
-      return false; // fixme
+      return false;
     },
-
-
 
     // Major Diagonals - go from top-left to bottom-right
     // --------------------------------------------------------------
     //
     // test if a specific major diagonal on this board contains a conflict
     hasMajorDiagonalConflictAt: function(majorDiagonalColumnIndexAtFirstRow) {
-
-      //changes
-      // majorDiagonalColumnIndexAtFirstRow = 1 || 0;
-
-      // var m = this.rows();
-      // console.log(majorDiagonalColumnIndexAtFirstRow);
-
-      // count = 0;
-
-      // for (var i = 0; i < m.length; i++) {
-      //   var col = m[i];
-
-      //   for (var j = 0; j < col.length; j++) {
-      //     console.log(' rowwwwwww:  :' + m[i]);
-      //     console.log(' collllll:  :' + col[j]);
-      //     console.log(i, j);
-      //     //majorDiagonalColumnIndexAtFirstRow = m[i][j];
-      //     if (m[i][majorDiagonalColumnIndexAtFirstRow] === 1 && count === 0) {
-      //       count++;
-      //     } else if (m[i][majorDiagonalColumnIndexAtFirstRow] === 1) {
-      //       return true;
-      //     }
-      //   }
-      // }
 
       var m = this.rows();
       var n = m.length;
@@ -206,13 +175,12 @@
         }
       }
 
-      return false; // fixme
+      return false;
     },
 
     // test if any major diagonals on this board contain conflicts
     hasAnyMajorDiagonalConflicts: function() {
 
-      // Placeholder to call hasMajorDiagonalConflictAt()
       var n = this.rows().length;
 
       for (var i = -n; i < n; i++) {
@@ -223,8 +191,6 @@
 
       return false;
     },
-
-
 
     // Minor Diagonals - go from top-right to bottom-left
     // --------------------------------------------------------------
